@@ -31,8 +31,8 @@
                         <td>{{ city.rank }}</td>
                         <td>{{ city.name }}</td>
                         <td>{{ city.state.name }} ({{ city.state.shortcut }})</td>
-                        <td>{{ city.population|floatformat }}</td>
-                        <td>{{ city.land_area|floatformat:1 }}</td>
+                        <td>{{ city.population|number_format }}</td>
+                        <td>{{ city.land_area|number_format:1 }}</td>
                     </tr>
                 {% endfor %}
            </tbody>
@@ -59,20 +59,20 @@
                     <th></th>
                     <th></th>
                     <th></th>
-                    <th>{{ topStatesSummary.population|floatformat }}</th>
-                    <th>{{ topStatesSummary.land_area|floatformat:1 }}</th>
+                    <th>{{ top_states_summary.population|number_format }}</th>
+                    <th>{{ top_states_summary.land_area|number_format:1 }}</th>
                </tr>
            </tfoot>
            <tbody>
-                {% for state in topStates %}
+                {% for state in top_states %}
                     <tr>
-                        <td>{{ loop.index }}</td>
+                        <td>{{ forloop.counter }}</td>
                         <td>{{ state.name }}</td>
                         <td>{{ state.capital }}</td>
-                        <td>{{ state.countCities }}</td>
-                        <td>{{ state.population|floatformat }}</td>
-                        <td>{{ state.sumPopulation|floatformat }}</td>
-                        <td>{{ state.sumLandArea|floatformat:1 }}</td>
+                        <td>{{ state.count_cities }}</td>
+                        <td>{{ state.population|number_format }}</td>
+                        <td>{{ state.sum_population|number_format }}</td>
+                        <td>{{ state.sum_land_area|number_format:1 }}</td>
                     </tr>
                 {% endfor %}
            </tbody>
