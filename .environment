@@ -1,0 +1,18 @@
+RAILS_ENV=production
+
+PATH=$HOME/.python/bin:/usr/local/python2.6/bin:$HOME/.ruby/gems/1.8/bin/:/usr/local/ruby1.8/bin:/usr/lib/ruby/gems/1.8/bin/:$PATH
+
+#RubyGems
+GEM_HOME=$HOME/.ruby/gems/1.8
+GEM_PATH=$HOME/.ruby/gems/1.8:/usr/lib/ruby/gems/1.8/
+RUBYOPT=rubygems
+
+#zanim odkomentujesz przeczytaj http://www.megiteam.pl/pomoc/www/python-25-i-26/
+
+#PYTHONPATH=$HOME:$HOME/.python/lib/python2.5/site-packages:/usr/local/python2.5/lib/python2.5/site-packages
+PYTHONPATH=$HOME:$HOME/.python/lib/python2.6/site-packages:/usr/local/python2.6/lib/python2.6/site-packages
+
+PYTHON_EGG_CACHE=$HOME/.python/cache
+
+#Perl
+PERL5LIB=$HOME/.perl/share/perl/5.8.8:$HOME/.perl/lib/perl/5.8.8
